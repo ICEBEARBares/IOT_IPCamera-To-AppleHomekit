@@ -1,0 +1,185 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "___",
+        "port": 51153,
+        "pin": "___",
+        "advertiser": "avahi"
+    },
+    "accessories": [],
+    "platforms": [
+        {
+            "name": "Config",
+            "port": 8581,
+            "platform": "config"
+        },
+        {
+            "name": "CameraUI",
+            "port": 8081,
+            "atHomeSwitch": false,
+            "logLevel": "info",
+            "mqtt": {
+                "active": false,
+                "tls": false,
+                "port": 1883
+            },
+            "http": {
+                "active": false,
+                "port": 7272,
+                "localhttp": false
+            },
+            "smtp": {
+                "active": false,
+                "port": 2727,
+                "space_replace": "+"
+            },
+            "ftp": {
+                "active": false,
+                "useFile": false,
+                "port": 5050
+            },
+            "ssl": {
+                "active": false
+            },
+            "options": {
+                "videoProcessor": "/var/lib/homebridge/node_modules/homebridge-camera-ui/node_modules/ffmpeg-for-homebridge/ffmpeg"
+            },
+            "cameras": [
+                {
+                    "name": "Primary DVR - Front",
+                    "manufacturer": "imou",
+                    "model": "Bullet 4MP",
+                    "serialNumber": "0",
+                    "motion": true,
+                    "motionTimeout": 15,
+                    "unbridge": true,
+                    "hsv": false,
+                    "prebuffering": false,
+                    "prebufferLength": 8,
+                    "videoConfig": {
+                        "source": "-i rtsp://admin:admin@192.168.1.90/cam/realmonitor?channel=1&subtype=01",
+                        "subSource": "-i rtsp://admin:admin@192.168.1.90/cam/realmonitor?channel=1&subtype=01",
+                        "stillImageSource": "-i rtsp://admin:admin@192.168.1.90/cam/realmonitor?channel=1&subtype=01",
+                        "rtspTransport": "tcp",
+                        "maxWidth": 0,
+                        "maxHeight": 0,
+                        "maxFPS": 0,
+                        "maxBitrate": 5000,
+                        "forceMax": true,
+                        "vcodec": "copy",
+                        "acodec": "libfdk_aac",
+                        "audio": true,
+                        "debug": true
+                    },
+                    "smtp": {
+                        "email": "MainCam"
+                    },
+                    "videoanalysis": {
+                        "active": true
+                    },
+                    "mqtt": {}
+                },
+                {
+                    "name": "Primary DVR - Car Park",
+                    "manufacturer": "imou",
+                    "model": "Bullet 4MP",
+                    "serialNumber": "0",
+                    "motion": true,
+                    "motionTimeout": 15,
+                    "unbridge": true,
+                    "hsv": false,
+                    "prebuffering": false,
+                    "prebufferLength": 4,
+                    "videoConfig": {
+                        "source": "-i rtsp://admin:admin@192.168.1.90/cam/realmonitor?channel=2&subtype=01",
+                        "subSource": "-i rtsp://admin:admin@192.168.1.90/cam/realmonitor?channel=2&subtype=01",
+                        "stillImageSource": "-i rtsp://admin:admin@192.168.1.90/cam/realmonitor?channel=2&subtype=01",
+                        "rtspTransport": "tcp",
+                        "maxWidth": 0,
+                        "maxHeight": 0,
+                        "maxFPS": 0,
+                        "maxBitrate": 500,
+                        "forceMax": true,
+                        "vcodec": "copy",
+                        "acodec": "libfdk_aac",
+                        "audio": true
+                    },
+                    "smtp": {
+                        "email": "Car Park"
+                    },
+                    "videoanalysis": {
+                        "active": true
+                    },
+                    "mqtt": {}
+                },
+                {
+                    "name": "Primary DVR - Front Yard",
+                    "manufacturer": "imou",
+                    "model": "Bullet 4MP",
+                    "serialNumber": "0",
+                    "motion": true,
+                    "motionTimeout": 15,
+                    "unbridge": true,
+                    "hsv": false,
+                    "prebuffering": false,
+                    "prebufferLength": 4,
+                    "videoConfig": {
+                        "source": "-i rtsp://admin:admin@192.168.1.90/cam/realmonitor?channel=3&subtype=01",
+                        "subSource": "-i rtsp://admin:admin@192.168.1.90/cam/realmonitor?channel=3&subtype=01",
+                        "stillImageSource": "-i rtsp://admin:admin@192.168.1.90/cam/realmonitor?channel=3&subtype=01",
+                        "rtspTransport": "tcp",
+                        "maxWidth": 0,
+                        "maxHeight": 0,
+                        "maxFPS": 0,
+                        "maxBitrate": 5000,
+                        "forceMax": true,
+                        "vcodec": "copy",
+                        "acodec": "libfdk_aac",
+                        "audio": true
+                    },
+                    "smtp": {
+                        "email": "Primary DVR - Front Yard"
+                    },
+                    "videoanalysis": {
+                        "active": true
+                    },
+                    "mqtt": {}
+                },
+                {
+                    "name": "Primary DVR - Left Side",
+                    "manufacturer": "imou",
+                    "model": "Bullet 4MP",
+                    "serialNumber": "0",
+                    "motion": true,
+                    "motionTimeout": 15,
+                    "unbridge": true,
+                    "hsv": false,
+                    "prebuffering": false,
+                    "prebufferLength": 4,
+                    "videoConfig": {
+                        "source": "-i rtsp://admin:admin@192.168.1.90/cam/realmonitor?channel=4&subtype=01",
+                        "subSource": "-i rtsp://admin:admin@192.168.1.90/cam/realmonitor?channel=4&subtype=01",
+                        "stillImageSource": "-i rtsp://admin:admin@192.168.1.90/cam/realmonitor?channel=4&subtype=01",
+                        "rtspTransport": "tcp",
+                        "maxWidth": 0,
+                        "maxHeight": 0,
+                        "maxFPS": 0,
+                        "maxBitrate": 5000,
+                        "forceMax": true,
+                        "vcodec": "copy",
+                        "acodec": "libfdk_aac",
+                        "audio": true
+                    },
+                    "smtp": {
+                        "email": "Primary DVR - Left Side"
+                    },
+                    "videoanalysis": {
+                        "active": true
+                    },
+                    "mqtt": {}
+                }
+            ],
+            "platform": "CameraUI"
+        }
+    ]
+}
