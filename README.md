@@ -4,6 +4,8 @@
 # **"STEPS"**
 ### 1. Install The "Homebridge OS" From [This Link](https://homebridge.io/) & [Here's The Totorial To Install](https://github.com/homebridge/homebridge/wiki) .
 ###### > By the way , This Project Will Use The Raspberry Pi 4 (4GB Model).
+<img src="https://user-images.githubusercontent.com/105172693/187125375-f6cb4c15-a0b5-47aa-a4fa-a78c60194d47.png" width=40% height=40%>
+
 ### 2. Then Finding The IP Of Your Local Platform Server & Setting Up The Homebridge Via The IP Address
 ###### > You Can Find The IP Adress Via Router From This IP , [192.168.1.1](192.168.1.1) & Access By Website Browser
 ### 3. Once , When You're Done By Setting Up The Account And Ready. It Will Be Look Like This
